@@ -6,7 +6,7 @@
 /*   By: khbouych <khbouych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 14:35:56 by khbouych          #+#    #+#             */
-/*   Updated: 2022/10/10 12:10:31 by khbouych         ###   ########.fr       */
+/*   Updated: 2022/10/23 15:09:52 by khbouych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_bzero(void *s, unsigned int n)
 {
-	ft_memset (s, '\0', n);
+	ft_memset(s, 0, n);
 }

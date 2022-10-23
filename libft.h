@@ -6,7 +6,7 @@
 /*   By: khbouych <khbouych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 21:10:47 by khbouych          #+#    #+#             */
-/*   Updated: 2022/10/23 13:31:24 by khbouych         ###   ########.fr       */
+/*   Updated: 2022/10/23 14:27:12 by khbouych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int					ft_memcmp(const void *str1, const void *str2, size_t n);
 void				*ft_memmove(void *dst, const void *src, size_t len);
 void				*ft_memcpy(void *dest, const void *src, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
-void				*ft_memset(void *s, int c, size_t n);
+void				*ft_memset(void *s, int c, size_t len);
 
 int					ft_toupper(int c);
 int					ft_tolower(int c);

@@ -6,13 +6,13 @@
 /*   By: khbouych <khbouych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 19:04:47 by khbouych          #+#    #+#             */
-/*   Updated: 2022/10/10 14:55:40 by khbouych         ###   ########.fr       */
+/*   Updated: 2022/10/23 15:59:07 by khbouych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_nbrlen(int num)
+static int	ft_nbrlen(long long num)
 {
 	int	i;
 
@@ -29,9 +29,9 @@ int	ft_nbrlen(int num)
 
 char	*ft_itoa(int n)
 {
-	int		len;
-	char	*d;
-	long	nbr;
+	int			len;
+	char		*res;
+	long long	nbr;
 
 	nbr = n;
 	len = ft_nbrlen(nbr);
@@ -40,18 +40,18 @@ char	*ft_itoa(int n)
 		len++;
 		nbr = -nbr;
 	}
-	d = malloc(sizeof(char) * len + 1);
-	if (!d)
+	res = malloc(sizeof(char) * len + 1);
+	if (!res)
 		return (0);
-	d[len] = '\0';
+	res[len] = '\0';
 	while (nbr > 0)
 	{
-		d[--len] = nbr % 10 + 48;
+		res[--len] = nbr % 10 + 48;
 		nbr /= 10;
 	}
 	if (n < 0)
-		d[0] = '-';
+		res[0] = '-';
 	if (n == 0)
-		d[0] = '0';
-	return (d);
+		res[0] = '0';
+	return (res);
 }

@@ -6,7 +6,7 @@
 /*   By: khbouych <khbouych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 11:40:58 by khbouych          #+#    #+#             */
-/*   Updated: 2022/10/22 09:21:24 by khbouych         ###   ########.fr       */
+/*   Updated: 2022/10/23 19:08:20 by khbouych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,5 @@ char	*ft_strrchr(const char *str, int c)
 			return ((char *) &str[i]);
 		i--;
 	}
-	if (!(char)c)
-		return ((char *) &str[i]);
 	return (0);
 }
