@@ -6,7 +6,7 @@
 /*   By: khbouych <khbouych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 20:55:26 by khbouych          #+#    #+#             */
-/*   Updated: 2022/10/22 14:44:29 by khbouych         ###   ########.fr       */
+/*   Updated: 2022/10/23 14:08:17 by khbouych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static void	ft_skipp(int *i, const char *p_str, int *sign)
 
 int	ft_atoi(const char *str)
 {
-	long long	res;
+	int			res;
 	int			sign;
 	int			i;
 	char		*p_str;

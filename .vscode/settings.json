@@ -35,6 +35,7 @@
     "type_traits": "c",
     "string": "c",
     "string_view": "c",
-    "ios": "c"
+    "ios": "c",
+    "limits.h": "c"
   }
 }
