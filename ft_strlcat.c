@@ -6,7 +6,7 @@
 /*   By: khbouych <khbouych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 11:44:06 by khbouych          #+#    #+#             */
-/*   Updated: 2022/10/23 18:11:51 by khbouych         ###   ########.fr       */
+/*   Updated: 2022/10/26 09:31:03 by khbouych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	lendst;
 	size_t	lensrc;
 
-	lendst = ft_strlen(dst);
-	lensrc = ft_strlen(src);
 	i = -1;
+	lensrc = ft_strlen(src);
 	if (!size)
 		return (lensrc);
+	lendst = ft_strlen(dst);
 	if (lendst > size)
 		lensrc += size;
 	else

@@ -6,9 +6,11 @@
 /*   By: khbouych <khbouych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:43:00 by khbouych          #+#    #+#             */
-/*   Updated: 2022/10/18 09:39:03 by khbouych         ###   ########.fr       */
+/*   Updated: 2022/10/26 09:39:41 by khbouych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

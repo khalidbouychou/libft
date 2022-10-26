@@ -6,7 +6,7 @@
 #    By: khbouych <khbouych@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/21 17:38:26 by khbouych          #+#    #+#              #
-#    Updated: 2022/10/23 19:45:21 by khbouych         ###   ########.fr        #
+#    Updated: 2022/10/25 20:24:54 by khbouych         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,4 +58,3 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean fclean all re bonus

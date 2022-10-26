@@ -6,7 +6,7 @@
 /*   By: khbouych <khbouych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 11:40:20 by khbouych          #+#    #+#             */
-/*   Updated: 2022/10/16 21:39:51 by khbouych         ###   ########.fr       */
+/*   Updated: 2022/10/26 19:55:24 by khbouych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strchr(const char *s, int c)
 
 	i = 0;
 	first_occurence = NULL;
-	if (c == 0)
+	if ((char)c == '\0')
 		return ((char *)&s[ft_strlen(s)]);
 	while (s[i])
 	{

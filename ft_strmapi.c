@@ -6,7 +6,7 @@
 /*   By: khbouych <khbouych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 21:16:27 by khbouych          #+#    #+#             */
-/*   Updated: 2022/10/23 18:37:19 by khbouych         ###   ########.fr       */
+/*   Updated: 2022/10/25 14:28:10 by khbouych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	while (++i < ft_strlen(s))
 		res[i] = f((unsigned int)i, s[i]);
-	res[i] = 0;
+	res[i] = '\0';
 	return (res);
-	return (NULL);
 }

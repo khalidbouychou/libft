@@ -6,7 +6,7 @@
 /*   By: khbouych <khbouych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 11:32:20 by khbouych          #+#    #+#             */
-/*   Updated: 2022/10/23 13:31:45 by khbouych         ###   ########.fr       */
+/*   Updated: 2022/10/25 14:03:57 by khbouych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static size_t	ft_count_words(char const *s, char c)
 	return (nbr_words);
 }
 
-static size_t	ft_len_word(char const *s, char c)
+static size_t	ft_lenght_word(char const *s, char c)
 {
 	int	i;
 	int	len;
@@ -43,39 +43,39 @@ static size_t	ft_len_word(char const *s, char c)
 	return (len);
 }
 
-static void	*ft_clear_leak(char **output, int nbr_words)
+static void	*ft_clear_leak(char **output, int count_w)
 {
 	int	i;
 
 	i = -1;
-	while (++i < nbr_words)
+	while (++i < count_w)
 		free(output[i]);
 	free(output);
 	return (0);
 }
 
-static char	**ft_fill_words(char const *s, char c, int nbr_words,
+static char	**ft_fill_words(char const *s, char c, int count_words,
 		char **output)
 {
-	int	i;
+	int	word;
 	int	j;
 	int	len;
 
-	i = -1;
-	while (++i < nbr_words)
+	word = -1;
+	while (++word < count_words)
 	{
 		while (*s == c)
 			s++;
-		len = ft_len_word(s, c);
-		output[i] = (char *)malloc(sizeof(char) * (len + 1));
-		if (!output[i])
-			return (ft_clear_leak(output, i));
+		len = ft_lenght_word(s, c);
+		output[word] = (char *)malloc(sizeof(char) * (len + 1));
+		if (!output[word])
+			return (ft_clear_leak(output, word));
 		j = -1;
 		while (++j < len)
-			output[i][j] = *s++;
-		output[i][j] = '\0';
+			output[word][j] = *s++;
+		output[word][j] = '\0';
 	}
-	output[i] = NULL;
+	output[word] = NULL;
 	return (output);
 }
 
