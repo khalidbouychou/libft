@@ -6,7 +6,7 @@
 /*   By: khbouych <khbouych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 11:12:11 by khbouych          #+#    #+#             */
-/*   Updated: 2022/10/24 09:27:02 by khbouych         ###   ########.fr       */
+/*   Updated: 2022/10/27 17:23:58 by khbouych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*tmp;
 
-	if (!del || !lst || !*lst)
+	if (!del || !*lst || !lst)
 		return ;
 	while (lst && *lst)
 	{

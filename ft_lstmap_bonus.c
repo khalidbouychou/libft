@@ -6,7 +6,7 @@
 /*   By: khbouych <khbouych@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 11:14:04 by khbouych          #+#    #+#             */
-/*   Updated: 2022/10/26 17:59:01 by khbouych         ###   ########.fr       */
+/*   Updated: 2022/10/27 16:47:07 by khbouych         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,23 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*prev;
+	t_list	*head;
 	t_list	*new;
 
 	if (!lst || !f)
 		return (NULL);
-	prev = NULL;
+	head = NULL;
 	while (lst)
 	{
 		new = ft_lstnew((*f)(lst->content));
 		if (!new)
 		{
-			ft_lstclear(&prev, del);
+			ft_lstclear(&head, del);
 			return (NULL);
 		}
-		ft_lstadd_back(&prev, new);
+		ft_lstadd_back(&head, new);
 		new = new->next;
 		lst = lst->next;
 	}
-	return (prev);
+	return (head);
 }
